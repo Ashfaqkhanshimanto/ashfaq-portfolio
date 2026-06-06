@@ -514,6 +514,8 @@ footer {
 @media (max-width: 480px) {
   .logo {
     font-size: 22px;
+    margin: auto 0;
+    padding-top: 10px;
   }
 
   .hero-content h1 {

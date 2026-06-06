@@ -11,10 +11,16 @@
   <header>
     <nav>
       <h2 class="logo">Ashfaq Khan</h2>
-      <ul>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+        ☰
+      </button>
+
+      <ul id="nav-links">
         <li><a href="index.html#home">Home</a></li>
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#certifications">Certifications</a></li>
         <li><a href="index.html#skills">Skills</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
@@ -35,15 +41,15 @@
     <h2>What I Configured</h2>
     <ul class="detail-list" id="project-configured"></ul>
 
-   <h2>Key Learning Outcomes</h2>
-<p id="project-learning"></p>
+    <h2>Key Learning Outcomes</h2>
+    <p id="project-learning"></p>
 
-<div id="project-images-section">
-  <h2>Project Screenshots</h2>
-  <div class="project-images-grid" id="project-images"></div>
-</div>
+    <div id="project-images-section">
+      <h2>Project Screenshots</h2>
+      <div class="project-images-grid" id="project-images"></div>
+    </div>
 
-<a href="index.html#projects" class="btn">Back to Projects</a>
+    <a href="index.html#projects" class="btn">Back to Projects</a>
   </section>
 
   <footer>
@@ -65,45 +71,62 @@
       document.getElementById("project-learning").textContent = project.learning;
 
       const techContainer = document.getElementById("project-technologies");
-      project.technologies.forEach(function(tech) {
+      project.technologies.forEach(function (tech) {
         const span = document.createElement("span");
         span.textContent = tech;
         techContainer.appendChild(span);
       });
 
       const configuredList = document.getElementById("project-configured");
-      project.configured.forEach(function(item) {
+      project.configured.forEach(function (item) {
         const li = document.createElement("li");
         li.textContent = item;
         configuredList.appendChild(li);
       });
 
       const imagesSection = document.getElementById("project-images-section");
-const imagesContainer = document.getElementById("project-images");
+      const imagesContainer = document.getElementById("project-images");
 
-if (project.images && project.images.length > 0) {
-  project.images.forEach(function(image) {
-    const imageCard = document.createElement("div");
-    imageCard.className = "project-image-card";
+      if (project.images && project.images.length > 0) {
+        project.images.forEach(function (image) {
+          const imageCard = document.createElement("div");
+          imageCard.className = "project-image-card";
 
-    const img = document.createElement("img");
-    img.src = image.src;
-    img.alt = image.caption;
+          const img = document.createElement("img");
+          img.src = image.src;
+          img.alt = image.caption;
 
-    const caption = document.createElement("p");
-    caption.textContent = image.caption;
+          const caption = document.createElement("p");
+          caption.textContent = image.caption;
 
-    imageCard.appendChild(img);
-    imageCard.appendChild(caption);
-    imagesContainer.appendChild(imageCard);
-  });
-} else {
-  imagesSection.style.display = "none";
-}
-
+          imageCard.appendChild(img);
+          imageCard.appendChild(caption);
+          imagesContainer.appendChild(imageCard);
+        });
+      } else {
+        imagesSection.style.display = "none";
+      }
     } else {
       document.getElementById("project-title").textContent = "Project Not Found";
       document.getElementById("project-description").textContent = "The project you are looking for does not exist.";
+      document.getElementById("project-images-section").style.display = "none";
+    }
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+      });
+
+      const links = navLinks.querySelectorAll("a");
+
+      links.forEach(function (link) {
+        link.addEventListener("click", function () {
+          navLinks.classList.remove("active");
+        });
+      });
     }
   </script>
 
