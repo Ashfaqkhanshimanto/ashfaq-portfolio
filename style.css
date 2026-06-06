@@ -27,6 +27,15 @@ nav {
   align-items: center;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 .logo {
   color: #38bdf8;
 }
@@ -343,15 +352,33 @@ footer {
 
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 15px 20px;
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
   }
 
   nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    background: #020617;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 15px;
+    width: 220px;
+    flex-direction: column;
     gap: 12px;
+    text-align: right;
+  }
+
+  nav ul.active {
+    display: flex;
   }
 
   nav a {
@@ -440,5 +467,33 @@ footer {
 
   #contact {
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-content h3 {
+    font-size: 18px;
+  }
+
+  nav ul {
+    width: 200px;
+    right: 10px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .hero-image img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .skills-list span {
+    font-size: 14px;
   }
 }
