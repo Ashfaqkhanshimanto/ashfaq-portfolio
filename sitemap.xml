@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://ashfaqkhan.vercel.app/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://ashfaqkhan.vercel.app/project.html?id=corporate-network</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://ashfaqkhan.vercel.app/project.html?id=moodle-ldap</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://ashfaqkhan.vercel.app/project.html?id=git-server</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://ashfaqkhan.vercel.app/project.html?id=irc-chat</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://ashfaqkhan.vercel.app/project.html?id=cisco-security</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://ashfaqkhan.vercel.app/project.html?id=collaborative-editor</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://ashfaqkhan.vercel.app/project.html?id=esports-fixture</loc>
+    <priority>0.80</priority>
+  </url>
+
+</urlset>
