@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Details | Ashfaq Khan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h2 class="logo">Ashfaq Khan</h2>
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="project-detail">
+    <h1 id="project-title">Project Title</h1>
+
+    <p id="project-description"></p>
+
+    <h2>Project Overview</h2>
+    <p id="project-overview"></p>
+
+    <h2>Technologies Used</h2>
+    <div class="skills-list" id="project-technologies"></div>
+
+    <h2>What I Configured</h2>
+    <ul class="detail-list" id="project-configured"></ul>
+
+    <h2>Key Learning Outcomes</h2>
+    <p id="project-learning"></p>
+
+    <a href="index.html#projects" class="btn">Back to Projects</a>
+  </section>
+
+  <footer>
+    <p>© 2026 Ashfaq Khan. All rights reserved.</p>
+  </footer>
+
+  <script src="projects.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get("id");
+    const project = projects[projectId];
+
+    if (project) {
+      document.title = project.title + " | Ashfaq Khan";
+
+      document.getElementById("project-title").textContent = project.title;
+      document.getElementById("project-description").textContent = project.description;
+      document.getElementById("project-overview").textContent = project.overview;
+      document.getElementById("project-learning").textContent = project.learning;
+
+      const techContainer = document.getElementById("project-technologies");
+      project.technologies.forEach(function(tech) {
+        const span = document.createElement("span");
+        span.textContent = tech;
+        techContainer.appendChild(span);
+      });
+
+      const configuredList = document.getElementById("project-configured");
+      project.configured.forEach(function(item) {
+        const li = document.createElement("li");
+        li.textContent = item;
+        configuredList.appendChild(li);
+      });
+    } else {
+      document.getElementById("project-title").textContent = "Project Not Found";
+      document.getElementById("project-description").textContent = "The project you are looking for does not exist.";
+    }
+  </script>
+
+</body>
+</html>

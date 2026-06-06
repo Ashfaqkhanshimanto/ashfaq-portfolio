@@ -1,0 +1,1 @@
+console.log("Ashfaq Khan portfolio website loaded successfully.");
