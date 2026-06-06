@@ -345,18 +345,100 @@ footer {
   nav {
     flex-direction: column;
     gap: 15px;
+    padding: 15px 20px;
   }
 
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 50px 18px;
+  }
+
+  .hero {
+    min-height: auto;
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+    padding-top: 50px;
   }
 
   .hero-content h1 {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .hero-content h3 {
-    font-size: 22px;
+    font-size: 20px;
+  }
+
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-content h1::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 260px;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .hero-info {
+    justify-content: center;
+  }
+
+  .hero-info div {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .project-grid,
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card,
+  .cert-card {
+    padding: 22px;
+  }
+
+  .project-detail h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .skills-list {
+    justify-content: center;
+  }
+
+  #contact {
+    text-align: center;
   }
 }
