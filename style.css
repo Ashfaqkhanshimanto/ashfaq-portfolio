@@ -427,6 +427,11 @@ h2 {
   margin-bottom: 25px;
 }
 
+.seo-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
 .social-links a {
   width: 52px;
   height: 52px;
