@@ -14,7 +14,33 @@ const projects = {
       "Joined Windows client machines to the domain.",
       "Created and tested a shared company folder."
     ],
-    learning: "This project helped me understand how a basic corporate network works, including centralized authentication, domain management, IP addressing, DNS resolution, and shared network resources."
+    learning: "This project helped me understand how a basic corporate network works, including centralized authentication, domain management, IP addressing, DNS resolution, and shared network resources.",
+images: [
+  {
+    src: "project-images/corporate-network/01-server-manager-roles.png",
+    caption: "Windows Server roles configured for the private network lab."
+  },
+  {
+    src: "project-images/corporate-network/02-active-directory-users.png",
+    caption: "Active Directory users created for centralized domain login."
+  },
+  {
+    src: "project-images/corporate-network/03-dhcp-leases.png",
+    caption: "DHCP leases showing automatic IP address assignment."
+  },
+  {
+    src: "project-images/corporate-network/04-client-ipconfig-domain.png",
+    caption: "Client network configuration showing domain connectivity."
+  },
+  {
+    src: "project-images/corporate-network/05-domain-user-login-proof.png",
+    caption: "Domain user login tested successfully on a Windows client."
+  },
+  {
+    src: "project-images/corporate-network/06-shared-folder-access.png",
+    caption: "Shared company folder access tested from a domain client."
+  }
+]
   },
 
   "moodle-ldap": {

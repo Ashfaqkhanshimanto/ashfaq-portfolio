@@ -35,10 +35,15 @@
     <h2>What I Configured</h2>
     <ul class="detail-list" id="project-configured"></ul>
 
-    <h2>Key Learning Outcomes</h2>
-    <p id="project-learning"></p>
+   <h2>Key Learning Outcomes</h2>
+<p id="project-learning"></p>
 
-    <a href="index.html#projects" class="btn">Back to Projects</a>
+<div id="project-images-section">
+  <h2>Project Screenshots</h2>
+  <div class="project-images-grid" id="project-images"></div>
+</div>
+
+<a href="index.html#projects" class="btn">Back to Projects</a>
   </section>
 
   <footer>
@@ -72,6 +77,30 @@
         li.textContent = item;
         configuredList.appendChild(li);
       });
+
+      const imagesSection = document.getElementById("project-images-section");
+const imagesContainer = document.getElementById("project-images");
+
+if (project.images && project.images.length > 0) {
+  project.images.forEach(function(image) {
+    const imageCard = document.createElement("div");
+    imageCard.className = "project-image-card";
+
+    const img = document.createElement("img");
+    img.src = image.src;
+    img.alt = image.caption;
+
+    const caption = document.createElement("p");
+    caption.textContent = image.caption;
+
+    imageCard.appendChild(img);
+    imageCard.appendChild(caption);
+    imagesContainer.appendChild(imageCard);
+  });
+} else {
+  imagesSection.style.display = "none";
+}
+
     } else {
       document.getElementById("project-title").textContent = "Project Not Found";
       document.getElementById("project-description").textContent = "The project you are looking for does not exist.";
